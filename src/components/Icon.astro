@@ -1,0 +1,28 @@
+---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+interface Props {
+  name: string;
+  class?: string;
+  id?: string;
+  title?: string;
+}
+
+const { name, class: className = 'w-4 h-4', id, title } = Astro.props;
+const filePath = join(process.cwd(), 'src/icons/nucleo', `${name}.svg`);
+let svg = readFileSync(filePath, 'utf-8').trim();
+
+const attrs = [
+  className ? `class="${className}"` : '',
+  id ? `id="${id}"` : '',
+  title ? `role="img" aria-label="${title}"` : 'aria-hidden="true"',
+  'focusable="false"',
+]
+  .filter(Boolean)
+  .join(' ');
+
+svg = svg.replace(/<svg\b([^>]*)>/, `<svg$1 ${attrs}>`);
+---
+
+<Fragment set:html={svg} />

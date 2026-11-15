@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CONTACT_EMAIL, DEVELOPER, LEGAL_EFFECTIVE } from '../config';
+---
+<Layout title="Privacy Policy — Tied" description="How Tied handles a wedding record on your iPhone, and what the developer never receives." path="privacy/">
+  <article class="px-4 pt-14 pb-10">
+    <div class="td-card mx-auto max-w-3xl p-8 md:p-12 prose-legal">
+      <h1 class="text-4xl md:text-5xl"><span data-lang-en>Privacy Policy for Tied</span><span data-lang-ru>Политика конфиденциальности Tied</span></h1>
+      <p class="text-sm mt-2"><span data-lang-en>Effective date: {LEGAL_EFFECTIVE.en}</span><span data-lang-ru>Дата вступления в силу: {LEGAL_EFFECTIVE.ru}</span> · {DEVELOPER} · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+
+      <div data-lang-en>
+        <p>This page says what the Tied iOS app and this website do with information. It matches how the app works.</p>
+
+        <h2>1. Who is responsible</h2>
+        <p>{DEVELOPER}, <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, publishes the app from Lithuania. Tied keeps the wedding record on your iPhone. There is no Tied account, no guest database, and no server that stores weddings. We do not receive your guests, budget, photos, audio or vendor files.</p>
+        <p>You decide what to write about other people. You are responsible for guest and vendor details you enter. We are not, because those details never reach us.</p>
+        <p>Apple is an independent controller for iCloud, push delivery, Calendar, Contacts, Messages, Mail, camera and photo pickers, speech recognition, Face ID, the App Store and iTunes Search.</p>
+
+        <h2>2. What we do not do</h2>
+        <p>We do not sell or share personal information for advertising, and we do not use advertising networks, analytics SDKs or cross-app tracking. The App’s privacy manifest declares no tracking and no data collected by the developer. This website does not set advertising cookies. Your language choice is stored in this browser’s local storage and stays on your device.</p>
+
+        <h2>3. What stays on the iPhone</h2>
+        <p>Depending on what you use, the App stores locally: the couple’s names, the date and venue (including an address or coordinates you type), guests and households, RSVP, phones, emails, notes, dietary and allergy notes, accessibility notes, seating, the budget, vendors and files you attach, checklist items, the day’s timeline, speeches, pronunciation recordings, photos you pick, and settings.</p>
+        <p>Dietary and allergy notes are text you typed. They are not a medical record, they are not checked against a menu, and they are not sent to a caterer by us.</p>
+        <p>The App does not ask for your location and does not track where you are.</p>
+
+        <h2>4. What can leave the iPhone</h2>
+        <p>Nothing is uploaded to us. Something leaves the phone only when you use a feature that needs Apple or a person you chose:</p>
+        <ul>
+          <li><strong>iCloud sync, off until you turn it on.</strong> The wedding record can sync through CloudKit into your private iCloud, and you can invite another Apple ID to that share. These stay on the phone that added them and are not synced: inspiration photos, the cover photo, pronunciation recordings, and vendor files (only a file’s description may sync). Apple holds that iCloud data under Apple’s terms. We cannot read it.</li>
+          <li><strong>The coordinator’s phone.</strong> If you send the plan to an iPhone next to you, that phone receives names, RSVP, tables, households, the schedule, emergency contacts, and the venue card. It does not receive allergy notes, guest phone numbers, guest emails or private guest notes. The system encrypts the session, and the other phone accepts it only with the code shown on its screen. During the search, your phone’s name can be visible to nearby devices on the local network. Our server is not involved.</li>
+          <li><strong>Calendar.</strong> If you allow it, task titles and dates you choose are written into Apple Calendar so they can be updated or removed later.</li>
+          <li><strong>Contacts.</strong> The system contact picker runs outside the App. Only people you select are copied into the record. Tied does not get ongoing access to your address book.</li>
+          <li><strong>Photos and camera.</strong> You pick images, or you scan a guest QR code with the camera. Recognition of that code happens on the device.</li>
+          <li><strong>Messages and Mail.</strong> Invitations and vendor notes open in the apps you already use. You send them. We do not operate email or SMS, and we do not learn whether a message was delivered.</li>
+          <li><strong>Apple Music search.</strong> The words you search are sent to Apple’s iTunes Search service so it can return songs and short previews. We do not receive the search or the results.</li>
+          <li><strong>Speech.</strong> Dictation is required to run on the device. If the language has no on-device model, Tied refuses to dictate rather than send audio to a server. Pronunciation recordings stay on the phone and are not part of iCloud sync.</li>
+          <li><strong>Speech drafts.</strong> On a device where Apple Intelligence is available, a draft is written by the on-device model. Otherwise Tied uses a local template. The prompt is not uploaded to us.</li>
+          <li><strong>Face ID.</strong> Leaving venue mode can ask for Face ID or the device passcode through Apple. Tied never receives biometric templates or the passcode. This only asks before the screen leaves venue mode. A person who already has the phone, the passcode, or an unlocked screen can still see what is on it.</li>
+          <li><strong>Notifications.</strong> Local reminders are scheduled on the device. Apple may deliver a silent push so an iCloud change can arrive. We do not send marketing notifications.</li>
+        </ul>
+
+        <h2>5. Support email</h2>
+        <p>If you email {CONTACT_EMAIL}, we receive whatever you chose to write. We use it to answer you, we do not add you to a marketing list, and we delete it when we no longer need it to handle the request. Do not send a guest list or medical details unless you mean to.</p>
+
+        <h2>6. How long it stays</h2>
+        <p>The record stays on the device until you delete items, run the in-app cleanup, or delete the app. Cleanup can remove sensitive guest fields and leave names, seating and gifts. An iCloud copy, a message you already sent, a calendar event, and a plan you sent to another phone were never in our possession. We cannot recover deleted data.</p>
+
+        <h2>7. Your rights</h2>
+        <p>Where the GDPR or a similar law applies, you can access, correct, delete, restrict and export information, and withdraw a permission. Because the wedding record is on your device, you do that in the App or in iOS Settings. For a request about a support email, or if you think this policy was not followed, write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. You may also complain to your local authority. In Lithuania that is the State Data Protection Inspectorate (VDAI).</p>
+        <p>If you entered information about guests or vendors, their requests about that information are for you to handle. We do not hold it and cannot correct their record inside your phone.</p>
+
+        <h2>8. California and other US states</h2>
+        <p>We do not sell or share personal information as those laws define it, and we do not use it for cross-context behavioural advertising.</p>
+
+        <h2>9. Children</h2>
+        <p>Tied is not directed to anyone under 16. We do not knowingly collect personal information from children. If you add a child as a guest, that entry stays in your record, on your device, under your responsibility.</p>
+
+        <h2>10. Crash reports</h2>
+        <p>If you opt in through Apple, crash reports are handled by Apple. We do not run a separate crash-reporting SDK.</p>
+
+        <h2>11. Changes</h2>
+        <p>We may update this policy. The date above is the current version. A material change will be reflected on this page.</p>
+
+        <h2>12. Contact</h2>
+        <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      </div>
+
+      <div data-lang-ru>
+        <p>Здесь написано, что приложение Tied для iOS и этот сайт делают с информацией. Текст совпадает с тем, как приложение работает.</p>
+
+        <h2>1. Кто отвечает</h2>
+        <p>Издатель приложения: {DEVELOPER} (Литва), <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Tied хранит запись о свадьбе на вашем iPhone. Аккаунта Tied нет, базы гостей нет, сервера со свадьбами нет. Мы не получаем гостей, бюджет, фото, аудио и файлы подрядчиков.</p>
+        <p>Вы сами решаете, что записать о других людях. За сведения о гостях и подрядчиках, которые вы вносите, отвечаете вы. Мы за них не отвечаем: до нас они не доходят.</p>
+        <p>Apple — самостоятельный оператор iCloud, доставки уведомлений, Календаря, Контактов, «Сообщений», «Почты», выбора фото и камеры, распознавания речи, Face ID, App Store и поиска iTunes.</p>
+
+        <h2>2. Чего мы не делаем</h2>
+        <p>Мы не продаём и не передаём персональные данные для рекламы и не используем рекламные сети, SDK аналитики и межприложенческое отслеживание. В манифесте конфиденциальности Приложения нет трекинга и нет данных, которые собирал бы разработчик. Этот сайт не ставит рекламных cookie. Выбранный язык хранится в local storage этого браузера и остаётся на вашем устройстве.</p>
+
+        <h2>3. Что остаётся на iPhone</h2>
+        <p>На телефоне приложение хранит то, чем вы пользуетесь: имена пары, дату и площадку (адрес или координаты, если вы их ввели), гостей и семьи, ответы, телефоны, почту, заметки, пищевые ограничения и аллергию, потребности доступности, рассадку, бюджет, подрядчиков и приложенные файлы, задачи, расписание дня, тексты речей, записи произношения, выбранные фото и настройки.</p>
+        <p>Заметки об аллергии — это текст, который набрали вы. Это не медицинская карта. Меню по ним не сверяется. На кухню мы их не отправляем.</p>
+        <p>Приложение не запрашивает геолокацию и не записывает, где вы находитесь.</p>
+
+        <h2>4. Что может покинуть iPhone</h2>
+        <p>На наш сервер ничего не загружается. Данные уходят с телефона только когда вы сами открываете функцию, которой нужен Apple или человек, которого вы выбрали:</p>
+        <ul>
+          <li><strong>Синхронизация iCloud выключена, пока вы её не включите.</strong> Запись может синхронизироваться через CloudKit в ваш iCloud, и вы можете пригласить туда другой Apple ID. На телефоне, куда их добавили, и вне синхронизации остаются фото вдохновения, обложка, записи произношения и файлы подрядчиков. Синхронизироваться может только описание файла. Эти данные iCloud хранит Apple по своим правилам. Прочитать их мы не можем.</li>
+          <li><strong>Телефон координатора.</strong> Если вы отправляете план на соседний iPhone, туда уходят имена, ответы, столы, семьи, расписание, экстренные контакты и карточка площадки. Туда не входят заметки об аллергии, телефоны и почта гостей и личные заметки о гостях. Сессию шифрует сама iOS, а принять передачу можно только с кодом на экране того телефона. Пока идёт поиск, имя вашего телефона могут увидеть соседние устройства в локальной сети. Нашего сервера в этом нет.</li>
+          <li><strong>Календарь.</strong> С вашего разрешения названия задач и даты, которые вы выбрали, записываются в Календарь Apple, чтобы их можно было обновить или удалить.</li>
+          <li><strong>Контакты.</strong> Системный выбор контакта работает вне Приложения. В запись попадают только те люди, которых вы выбрали. Постоянного доступа к адресной книге у Tied нет.</li>
+          <li><strong>Фото и камера.</strong> Вы выбираете снимки или сканируете QR гостя камерой. Код распознаётся на устройстве.</li>
+          <li><strong>Сообщения и Почта.</strong> Приглашения и заметки подрядчику открываются в приложениях, которыми вы уже пользуетесь. Отправляете их вы. Своей почты и SMS у нас нет, и мы не узнаём, дошло ли сообщение.</li>
+          <li><strong>Поиск Apple Music.</strong> Слова запроса уходят в поиск iTunes компании Apple, чтобы вернулись песни и короткие фрагменты. Сам запрос и ответ мы не получаем.</li>
+          <li><strong>Речь.</strong> Диктовка работает только на устройстве. Если для языка нет локальной модели, Tied не начнёт диктовку и не отправит звук на сервер. Записи произношения остаются на телефоне и в синхронизацию iCloud не входят.</li>
+          <li><strong>Черновики речей.</strong> Если на телефоне есть Apple Intelligence, черновик пишет модель на устройстве. Если нет, Tied подставляет шаблон, который хранится на телефоне. Текст запроса к нам не загружается.</li>
+          <li><strong>Face ID.</strong> Выход из режима площадки может запросить Face ID или код устройства через Apple. Биометрию и код Tied не получает. Это только вопрос перед выходом из режима площадки. Человек, у которого уже есть телефон, код или открытый экран, увидит то, что на нём показано.</li>
+          <li><strong>Уведомления.</strong> Местные напоминания ставятся на устройстве. Apple может прислать тихое уведомление, чтобы дошло изменение из iCloud. Рекламных уведомлений мы не шлём.</li>
+        </ul>
+
+        <h2>5. Письмо в поддержку</h2>
+        <p>Если вы пишете на {CONTACT_EMAIL}, мы получаем то, что вы сами решили написать. Мы используем это, чтобы ответить, не добавляем вас в рассылку и удаляем письмо, когда оно больше не нужно для ответа. Не присылайте список гостей или медицинские сведения, если не хотите, чтобы они оказались в переписке.</p>
+
+        <h2>6. Сколько это хранится</h2>
+        <p>Запись остаётся на устройстве, пока вы не удалите пункты, не запустите очистку в приложении или не удалите само приложение. Очистка может убрать чувствительные поля гостей и оставить имена, рассадку и подарки. Копия в iCloud, уже отправленное сообщение, событие календаря и план на другом телефоне у нас никогда не лежали. Удалённое мы восстановить не можем.</p>
+
+        <h2>7. Ваши права</h2>
+        <p>Там, где действует GDPR или похожий закон, вы можете запросить доступ, исправление, удаление, ограничение и перенос, а также отозвать разрешение. Поскольку запись о свадьбе на вашем устройстве, это делается в Приложении или в настройках iOS. По письму в поддержку или если вам кажется, что политика не соблюдена, напишите на <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Можно также обратиться в местный орган. В Литве это Государственная инспекция по защите данных (VDAI).</p>
+        <p>Если вы внесли сведения о гостях или подрядчиках, их вопросы об этих сведениях адресованы вам. У нас их нет, и мы не можем поправить запись внутри вашего телефона.</p>
+
+        <h2>8. Калифорния и другие штаты США</h2>
+        <p>Мы не продаём и не передаём персональные данные в значении этих законов и не используем их для поведенческой рекламы.</p>
+
+        <h2>9. Дети</h2>
+        <p>Tied не предназначен для лиц младше 16 лет. Мы сознательно не собираем их персональные данные. Если вы добавите ребёнка как гостя, эта запись останется в вашей базе, на вашем устройстве и под вашу ответственность.</p>
+
+        <h2>10. Отчёты о сбоях</h2>
+        <p>Если вы согласились через Apple, отчёты о сбоях обрабатывает Apple. Отдельного SDK для сбоев у нас нет.</p>
+
+        <h2>11. Изменения</h2>
+        <p>Мы можем обновить политику. Дата в начале страницы показывает действующую версию. Существенное изменение будет на этой странице.</p>
+
+        <h2>12. Контакт</h2>
+        <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      </div>
+    </div>
+  </article>
+</Layout>

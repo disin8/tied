@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CONTACT_EMAIL, url } from '../config';
+---
+<Layout title="Support for Tied" description="Help with Tied: the wedding record on your iPhone, iCloud sharing, and sending the schedule to a coordinator." path="support/">
+  <article class="px-4 pt-14 pb-10">
+    <div class="td-card mx-auto max-w-3xl p-8 md:p-12 prose-legal">
+      <h1 class="text-4xl md:text-5xl"><span data-lang-en>Tied support</span><span data-lang-ru>Поддержка Tied</span></h1>
+      <div data-lang-en>
+        <p>Email <a href={`mailto:${CONTACT_EMAIL}?subject=Tied%20support`}>{CONTACT_EMAIL}</a>. Put in the app version, the iPhone model, the iOS version, and what you expected to happen. Leave out the guest list, allergy notes and vendor contracts, unless we ask for one screenshot and you are fine sending it. The message is only for the reply.</p>
+        <h2>Before you write</h2>
+        <ul>
+          <li>The record is on this iPhone. Deleting the app or the data removes that copy. We cannot restore it.</li>
+          <li>iCloud is optional. Turn it on if you want the plan in your private iCloud, and invite a partner only if they should see it. Photos, the cover, pronunciation recordings and vendor files stay on the phone that added them.</li>
+          <li>Dictation stays on the device. If this language has no offline speech model, Tied asks you to type. It does not send the audio anywhere.</li>
+          <li>Sending the plan to a coordinator needs both phones on the local network, plus the code shown on the receiving phone. That phone gets names, RSVP, tables, the schedule and emergency contacts. It does not get allergy notes, guest phone numbers or email.</li>
+          <li>After the wedding you can clear sensitive guest details in the app and keep names, seating and gifts.</li>
+        </ul>
+        <p>See also the <a href={url('privacy/')}>Privacy Policy</a> and <a href={url('terms/')}>Terms of Use</a>.</p>
+      </div>
+      <div data-lang-ru>
+        <p>Напишите на <a href={`mailto:${CONTACT_EMAIL}?subject=Tied%20support`}>{CONTACT_EMAIL}</a>. Укажите версию приложения, модель iPhone, версию iOS и что вы ожидали. Список гостей, заметки об аллергии и договоры подрядчиков лучше не прикладывать, пока мы сами не попросим один снимок и вам будет спокойно его отправить. Письмо нужно только чтобы ответить.</p>
+        <h2>Прежде чем писать</h2>
+        <ul>
+          <li>Запись лежит на этом iPhone. Удаление приложения или данных стирает эту копию. Восстановить её мы не можем.</li>
+          <li>iCloud необязателен. Включайте его, если план должен лежать в вашем iCloud, и приглашайте партнёра только если он должен это видеть. Фото, обложка, записи произношения и файлы подрядчиков остаются на телефоне, куда их добавили.</li>
+          <li>Диктовка остаётся на устройстве. Если для языка нет офлайн-модели, Tied попросит набрать текст. Звук никуда не уходит.</li>
+          <li>Отправка плана координатору требует локальной сети и кода на его телефоне. Туда уходят имена, ответы, столы, расписание и экстренные контакты. Заметки об аллергии, телефоны и почта гостей не уходят.</li>
+          <li>После свадьбы чувствительные сведения о гостях можно очистить в приложении и оставить имена, рассадку и подарки.</li>
+        </ul>
+        <p>См. также <a href={url('privacy/')}>политику конфиденциальности</a> и <a href={url('terms/')}>условия использования</a>.</p>
+      </div>
+    </div>
+  </article>
+</Layout>

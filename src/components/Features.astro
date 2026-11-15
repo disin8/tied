@@ -1,0 +1,66 @@
+---
+const items = [
+  {
+    kickerEn: 'Replies',
+    kickerRu: 'Ответы',
+    titleEn: 'Mark replies with a swipe',
+    titleRu: 'Отметьте ответы смахиванием',
+    bodyEn: 'Waiting replies come one by one. Yes, no, skip, or undo. You don’t have to open every guest card.',
+    bodyRu: 'Ответы, которые ещё ждут, идут один за другим. Да, нет, пропуск или отмена. Не нужно открывать карточку каждого гостя.',
+  },
+  {
+    kickerEn: 'Day',
+    kickerRu: 'День',
+    titleEn: 'Set length by dragging on the dial',
+    titleRu: 'Задайте длину на циферблате',
+    bodyEn: 'Tap an hour and drag until the length is right. Start and duration go onto the item. For outdoor items you can save a second time and place. One Plan B switch moves those items if the weather turns.',
+    bodyRu: 'Нажмите на час и ведите палец до нужной длины. Начало и длительность попадают в пункт. Для улицы можно сохранить другие время и место. Один переключатель «план Б» переключает их, если погода портится.',
+  },
+  {
+    kickerEn: 'Money',
+    kickerRu: 'Деньги',
+    titleEn: 'Contract, paid, remaining',
+    titleRu: 'Договор, оплачено, остаток',
+    bodyEn: 'Each vendor shows the contract total, how much you paid, and how much is left. Next to that: not booked, deposit paid, or paid in full, and the phone number to call.',
+    bodyRu: 'У каждого подрядчика сумма договора, сколько уже оплачено и сколько осталось. Рядом статус: не забронирован, предоплата внесена или оплачено полностью, и телефон для звонка.',
+  },
+  {
+    kickerEn: 'Venue',
+    kickerRu: 'Площадка',
+    titleEn: 'Send the schedule to another iPhone',
+    titleRu: 'Отправьте программу на другой iPhone',
+    bodyEn: 'Venue mode shows who’s checked in, the tables, and the schedule. You can send that to a nearby iPhone with a four-digit code. Allergy notes, guest phones, and private notes are left out. Face ID to exit.',
+    bodyRu: 'В режиме площадки видны кто пришёл, столы и программа. Это можно отправить на соседний iPhone с кодом из четырёх цифр. Заметки об аллергии, телефоны гостей и личные заметки туда не входят. Выход через Face ID.',
+  },
+  {
+    kickerEn: 'Names',
+    kickerRu: 'Имена',
+    titleEn: 'Record how a name is said',
+    titleRu: 'Запишите, как произносится имя',
+    bodyEn: 'On a guest’s card you can record up to ten seconds of pronunciation. Before the ceremony, the officiant can play through the list one name at a time.',
+    bodyRu: 'На карточке гостя можно записать до десяти секунд произношения. Перед церемонией ведущий листает список и слушает имена по одному.',
+  },
+  {
+    kickerEn: 'Music',
+    kickerRu: 'Музыка',
+    titleEn: 'Songs to play and songs to skip',
+    titleRu: 'Что включить и что не включать',
+    bodyEn: 'Tracks for the processional, first dance, cake, and reception, plus a do-not-play list. Search Apple Music, hear a 30-second preview, and export a PDF for the DJ.',
+    bodyRu: 'Треки на выход, первый танец, торт и приём, плюс список «не включать». Поиск в Apple Music, превью 30 секунд и PDF для диджея.',
+  },
+];
+---
+<section id="features" class="px-4 py-16">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="text-4xl md:text-5xl text-center max-w-2xl mx-auto leading-tight"><span data-lang-en>Features</span><span data-lang-ru>Возможности</span></h2>
+    <div class="mt-12 grid md:grid-cols-2 gap-5">
+      {items.map((item) => (
+        <article class="td-card p-6 md:p-7" data-reveal>
+          <p class="text-xs font-semibold tracking-[0.16em] uppercase text-[var(--brass)]"><span data-lang-en>{item.kickerEn}</span><span data-lang-ru>{item.kickerRu}</span></p>
+          <h3 class="mt-2 text-3xl leading-tight"><span data-lang-en>{item.titleEn}</span><span data-lang-ru>{item.titleRu}</span></h3>
+          <p class="mt-3 text-sm leading-relaxed text-[var(--ink-soft)]"><span data-lang-en>{item.bodyEn}</span><span data-lang-ru>{item.bodyRu}</span></p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

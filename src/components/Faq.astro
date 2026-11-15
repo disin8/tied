@@ -1,0 +1,61 @@
+---
+export const faqs = [
+  {
+    q: ['Do I need an account?', 'Нужен ли аккаунт?'],
+    a: [
+      'No. Tied works without registration. To share with a partner you only need your Apple ID and iCloud.',
+      'Нет. Tied работает без регистрации. Для общего доступа с партнёром достаточно вашего Apple ID и iCloud.',
+    ],
+  },
+  {
+    q: ['Does it work offline?', 'Работает ли без интернета?'],
+    a: [
+      'Yes. Guests, seating, contracts, the schedule, and PDFs work without a connection. You need the internet for music search and iCloud sync.',
+      'Да. Гости, рассадка, договоры, план дня и PDF работают без сети. Интернет нужен для поиска музыки и синхронизации через iCloud.',
+    ],
+  },
+  {
+    q: ['Can my partner see the plan?', 'Может ли партнёр видеть план?'],
+    a: [
+      'Yes. Turn on sync in Settings and invite your partner through iCloud. For a coordinator, Venue mode can send the schedule and guest list to a nearby iPhone. Allergy notes, phones, and private notes are not included.',
+      'Да. Включите синхронизацию в Настройках и пригласите партнёра через iCloud. Координатору в режиме площадки можно отправить план дня и список гостей на соседний iPhone. Заметки об аллергии, телефоны и личные заметки туда не входят.',
+    ],
+  },
+  {
+    q: ['Who sees the allergy notes?', 'Кто видит заметки об аллергии?'],
+    a: [
+      'Only you and the person you invited to the shared wedding through iCloud. They are not sent to a coordinator. You export the catering summary yourself when you want to send it.',
+      'Только вы и человек, которого пригласили в общую свадьбу через iCloud. Координатору они не передаются. Сводку для кейтеринга экспортируете и отправляете сами, когда нужно.',
+    ],
+  },
+  {
+    q: ['Can you recover something I deleted?', 'Можете ли вы восстановить то, что я удалил?'],
+    a: [
+      'No. We don’t have your data. The app can undo recent actions, and automatic copies are kept on the device. If you delete the app, those copies go with it, so export a copy from time to time.',
+      'Нет. Ваших данных у нас нет. В приложении можно отменить последние действия, а на устройстве хранятся автоматические копии. Если удалить приложение, копии исчезнут вместе с ним, поэтому иногда сохраняйте копию через экспорт.',
+    ],
+  },
+  {
+    q: ['Which devices and languages?', 'Какие устройства и языки?'],
+    a: [
+      'iPhone with iOS 17 or later. The interface is in English and Russian. Speech drafts and some dictation need Apple Intelligence or an offline language model.',
+      'iPhone с iOS 17 или новее. Интерфейс на русском и английском. Черновики речи и часть диктовки зависят от Apple Intelligence или офлайн-модели языка.',
+    ],
+  },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q[0], acceptedAnswer: { '@type': 'Answer', text: f.a[0] } })) };
+---
+<section id="faq" class="px-4 py-16">
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <div class="mx-auto max-w-3xl">
+    <h2 class="text-3xl md:text-5xl text-center"><span data-lang-en>FAQ</span><span data-lang-ru>Вопросы</span></h2>
+    <div class="mt-10 space-y-3">
+      {faqs.map((f) => (
+        <article class="td-card p-5" data-reveal>
+          <h3 class="text-xl leading-tight"><span data-lang-en>{f.q[0]}</span><span data-lang-ru>{f.q[1]}</span></h3>
+          <p class="mt-3 text-[var(--ink-soft)] leading-relaxed"><span data-lang-en>{f.a[0]}</span><span data-lang-ru>{f.a[1]}</span></p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import Mark from './Mark.astro';
+import { url } from '../config';
+const links = [
+  { href: url('#features'), en: 'Features', ru: 'Возможности' },
+  { href: url('#privacy'), en: 'Privacy', ru: 'Приватность' },
+  { href: url('#faq'), en: 'FAQ', ru: 'Вопросы' },
+  { href: url('support/'), en: 'Support', ru: 'Поддержка' },
+];
+---
+<header class="sticky top-3 z-50 px-3">
+  <div class="td-card mx-auto max-w-5xl flex items-center justify-between gap-3 !rounded-full px-4 py-2.5">
+    <a href={url()} class="flex items-center gap-2 font-display text-2xl leading-none" aria-label="Tied">
+      <Mark class="w-10 h-10" />
+      Tied
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-[var(--ink-soft)]" aria-label="Main">
+      {links.map((l) => (
+        <a href={l.href} class="hover:text-[var(--ink)] transition-colors"><span data-lang-en>{l.en}</span><span data-lang-ru>{l.ru}</span></a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="flex rounded-full border border-[var(--border)] p-0.5 text-xs font-bold" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true" class="px-2.5 py-1 rounded-full aria-pressed:bg-[var(--ink)] aria-pressed:text-[var(--bg)]">EN</button>
+        <button type="button" data-lang-btn="ru" aria-pressed="false" class="px-2.5 py-1 rounded-full aria-pressed:bg-[var(--ink)] aria-pressed:text-[var(--bg)]">RU</button>
+      </div>
+    </div>
+  </div>
+</header>

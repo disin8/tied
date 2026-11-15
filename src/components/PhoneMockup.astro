@@ -1,0 +1,98 @@
+---
+interface Props {
+  only?: 'home' | 'day' | 'guests' | 'handoff';
+}
+const { only } = Astro.props;
+const frame = `${import.meta.env.BASE_URL}assets/frame.webp`;
+const show = (id: 'home' | 'day' | 'guests' | 'handoff') => !only || only === id;
+---
+<div class="relative mx-auto w-full max-w-[320px] aspect-[1508/3278] select-none">
+  <div class="absolute overflow-hidden z-0 bg-[#f6f1ea]" style="left: 10.01%; top: 10.01%; width: 79.98%; height: 79.98%; border-radius: 11.5%;">
+    {show('home') && (
+      <div id={only ? undefined : 'mock-home'} class="mock-screen h-full flex flex-col text-[#2a2622]" hidden={only ? undefined : false}>
+        <div class="h-11 shrink-0"></div>
+        <div class="mx-3 flex-1 rounded-[22px] relative overflow-hidden" style="background: radial-gradient(90px 70px at 18% 28%, #f0d2bc, transparent 70%), radial-gradient(110px 80px at 82% 18%, #e6d4ae, transparent 72%), radial-gradient(130px 90px at 55% 78%, #d5ddd2, transparent 70%), #f4efe6;">
+          <p class="absolute top-4 left-4 text-[9px] tracking-[0.22em] uppercase opacity-55"><span data-lang-en>15 November</span><span data-lang-ru>15 ноября</span></p>
+          <p class="absolute left-4 right-4 top-[22%] font-display text-[34px] leading-[0.92]">Lena<br/>&amp; Seryozha</p>
+          <p class="absolute left-4 bottom-4 text-[12px] font-semibold tracking-wide"><span data-lang-en>128 days</span><span data-lang-ru>128 дней</span></p>
+        </div>
+        <div class="grid grid-cols-3 text-center py-3 px-2">
+          <div><p class="font-display text-[22px] leading-none">86</p><p class="text-[8px] uppercase tracking-[0.14em] opacity-45 mt-1"><span data-lang-en>Guests</span><span data-lang-ru>Гости</span></p></div>
+          <div><p class="font-display text-[22px] leading-none">12</p><p class="text-[8px] uppercase tracking-[0.14em] opacity-45 mt-1"><span data-lang-en>Open</span><span data-lang-ru>Открыто</span></p></div>
+          <div><p class="font-display text-[22px] leading-none">4</p><p class="text-[8px] uppercase tracking-[0.14em] opacity-45 mt-1"><span data-lang-en>Due</span><span data-lang-ru>Срок</span></p></div>
+        </div>
+      </div>
+    )}
+
+    {show('day') && (
+      <div id={only ? undefined : 'mock-day'} class="mock-screen h-full flex flex-col bg-[#f6f1ea] text-[#2a2622] px-3" hidden={only ? undefined : true}>
+        <div class="h-11 shrink-0"></div>
+        <p class="font-display text-[28px] leading-none"><span data-lang-en>The day</span><span data-lang-ru>День</span></p>
+        <p class="mt-1 text-[10px] opacity-50"><span data-lang-en>Hour by hour</span><span data-lang-ru>По часам</span></p>
+        <div class="mt-3 space-y-2 text-[11px]">
+          <div class="grid grid-cols-[36px_1fr] gap-2 items-start">
+            <span class="pt-2 opacity-45">15:00</span>
+            <div class="rounded-xl bg-white border border-black/8 px-2.5 py-2">
+              <p class="font-semibold"><span data-lang-en>Ceremony</span><span data-lang-ru>Церемония</span></p>
+              <p class="text-[9px] opacity-50"><span data-lang-en>Garden · Lena</span><span data-lang-ru>Сад · Лена</span></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[36px_1fr] gap-2 items-start">
+            <span class="pt-2 opacity-45">16:10</span>
+            <div class="rounded-xl bg-[#f3e4d4] border border-[#a36b52]/40 px-2.5 py-2">
+              <p class="text-[9px] font-semibold tracking-wide text-[#8d6b3c]">16:10-17:10</p>
+              <p class="font-semibold"><span data-lang-en>New item</span><span data-lang-ru>Новый пункт</span></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[36px_1fr] gap-2 items-start">
+            <span class="pt-2 opacity-45">18:00</span>
+            <div class="rounded-xl bg-white border border-black/8 px-2.5 py-2 font-semibold"><span data-lang-en>Dinner</span><span data-lang-ru>Ужин</span></div>
+          </div>
+          <div class="grid grid-cols-[36px_1fr] gap-2 items-start opacity-80">
+            <span class="pt-2 opacity-45">21:00</span>
+            <div class="rounded-xl bg-white border border-black/8 px-2.5 py-2">
+              <p class="font-semibold"><span data-lang-en>Dancing</span><span data-lang-ru>Танцы</span></p>
+              <p class="text-[9px] opacity-50"><span data-lang-en>Outdoor · plan B ready</span><span data-lang-ru>Улица · план Б готов</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {show('guests') && (
+      <div id={only ? undefined : 'mock-guests'} class="mock-screen h-full flex flex-col bg-[#f6f1ea] text-[#2a2622] px-3" hidden={only ? undefined : true}>
+        <div class="h-11 shrink-0"></div>
+        <p class="font-display text-[28px] leading-none"><span data-lang-en>Guests</span><span data-lang-ru>Гости</span></p>
+        <p class="mt-1 text-[10px] opacity-50"><span data-lang-en>86 invited · 41 yes</span><span data-lang-ru>86 званых · 41 да</span></p>
+        <div class="mt-3 divide-y divide-black/8 text-[12px]">
+          <div class="py-2.5 flex justify-between gap-2"><div><p class="font-semibold">Elena Volkova</p><p class="text-[10px] opacity-45"><span data-lang-en>Bride · table 4</span><span data-lang-ru>Невеста · стол 4</span></p></div><span class="text-[10px] font-semibold self-center"><span data-lang-en>Yes</span><span data-lang-ru>Да</span></span></div>
+          <div class="py-2.5 flex justify-between gap-2"><div><p class="font-semibold"><span data-lang-en>The Sokolovs</span><span data-lang-ru>Соколовы</span></p><p class="text-[10px] opacity-45"><span data-lang-en>Household · 3</span><span data-lang-ru>Семья · 3</span></p></div><span class="text-[10px] font-semibold self-center"><span data-lang-en>Yes</span><span data-lang-ru>Да</span></span></div>
+          <div class="py-2.5 flex justify-between gap-2"><div><p class="font-semibold">James Wright</p><p class="text-[10px] opacity-45"><span data-lang-en>Plus one</span><span data-lang-ru>С плюсом</span></p></div><span class="text-[10px] opacity-50 self-center"><span data-lang-en>Waiting</span><span data-lang-ru>Ждём</span></span></div>
+          <div class="py-2.5"><p class="font-semibold"><span data-lang-en>Kitchen note</span><span data-lang-ru>Заметка кухне</span></p><p class="text-[10px] opacity-55 leading-snug mt-0.5"><span data-lang-en>No gluten · James Wright</span><span data-lang-ru>Без глютена · James Wright</span></p></div>
+        </div>
+      </div>
+    )}
+
+    {show('handoff') && (
+      <div id={only ? undefined : 'mock-handoff'} class="mock-screen h-full flex flex-col bg-[#f6f1ea] text-[#2a2622] px-3" hidden={only ? undefined : true}>
+        <div class="h-11 shrink-0"></div>
+        <p class="font-display text-[26px] leading-none"><span data-lang-en>Right now</span><span data-lang-ru>Сейчас</span></p>
+        <p class="mt-1 text-[10px] opacity-50">15:00–16:00</p>
+        <div class="mt-3 rounded-xl bg-white border border-black/8 px-2.5 py-2 text-[12px]">
+          <p class="font-semibold"><span data-lang-en>Ceremony</span><span data-lang-ru>Церемония</span></p>
+          <p class="text-[10px] opacity-50"><span data-lang-en>Garden</span><span data-lang-ru>Сад</span></p>
+        </div>
+        <p class="mt-4 text-[10px] uppercase tracking-[0.14em] opacity-45"><span data-lang-en>Next</span><span data-lang-ru>Дальше</span></p>
+        <div class="mt-1.5 rounded-xl bg-white border border-black/8 px-2.5 py-2 text-[12px]">
+          <p class="font-semibold">18:00 · <span data-lang-en>Dinner</span><span data-lang-ru>Ужин</span></p>
+        </div>
+        <p class="mt-4 text-[10px] uppercase tracking-[0.14em] opacity-45"><span data-lang-en>If it rains</span><span data-lang-ru>Если дождь</span></p>
+        <div class="mt-1.5 rounded-xl bg-[#f3e4d4] border border-[#a36b52]/40 px-2.5 py-2 text-[12px]">
+          <p class="font-semibold"><span data-lang-en>Dancing, indoors</span><span data-lang-ru>Танцы, в зале</span></p>
+          <p class="text-[10px] opacity-55"><span data-lang-en>Backup time and place</span><span data-lang-ru>Запасные время и место</span></p>
+        </div>
+      </div>
+    )}
+  </div>
+  <img src={frame} alt="" width="1508" height="3278" class="relative z-10 w-full h-full pointer-events-none" />
+</div>

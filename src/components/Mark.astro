@@ -1,0 +1,6 @@
+---
+interface Props { class?: string }
+const { class: cls = 'w-8 h-8' } = Astro.props;
+const src = `${import.meta.env.BASE_URL}icon.webp`;
+---
+<img src={src} alt="" width="1024" height="1024" class:list={[cls, 'rounded-[22%] bg-white object-cover ring-1 ring-black/10']} />

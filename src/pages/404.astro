@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { url } from '../config';
+---
+<Layout title="Page not found — Tied" noindex path="404.html">
+  <section class="px-4 py-32 text-center">
+    <h1 class="text-5xl"><span data-lang-en>This page is not here</span><span data-lang-ru>Такой страницы нет</span></h1>
+    <p class="mt-4 text-[var(--ink-soft)]"><span data-lang-en>The link may be old.</span><span data-lang-ru>Ссылка, возможно, устарела.</span></p>
+    <a href={url()} class="td-btn mt-8"><span data-lang-en>Back to home</span><span data-lang-ru>На главную</span></a>
+  </section>
+</Layout>

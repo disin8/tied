@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CONTACT_EMAIL, DEVELOPER, LEGAL_EFFECTIVE } from '../config';
+---
+<Layout title="Terms of Use for Tied" description="Terms for the Tied iOS app. It stores the wedding on your iPhone. It does not book the venue, pay vendors, or give legal, tax, or medical advice." path="terms/">
+  <article class="px-4 pt-14 pb-10">
+    <div class="td-card mx-auto max-w-3xl p-8 md:p-12 prose-legal">
+      <h1 class="text-4xl md:text-5xl"><span data-lang-en>Terms of Use for Tied</span><span data-lang-ru>Условия использования Tied</span></h1>
+      <p class="text-sm mt-2"><span data-lang-en>Effective date: {LEGAL_EFFECTIVE.en}</span><span data-lang-ru>Дата вступления в силу: {LEGAL_EFFECTIVE.ru}</span> · {DEVELOPER} · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+
+      <div data-lang-en>
+        <p>These Terms govern your use of the Tied iOS application (“the App”). By using the App you also agree to Apple’s standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Licensed Application End User License Agreement</a>. If you do not agree, do not use the App.</p>
+
+        <h2>1. License</h2>
+        <p>{DEVELOPER} grants you a limited, non-exclusive, non-transferable, revocable license to use the App on Apple devices you own or control, for your personal, non-commercial wedding planning, subject to these Terms and Apple’s usage rules.</p>
+
+        <h2>2. What Tied does, and what it does not do</h2>
+        <p>Tied stores your notes on the iPhone. It does not book a venue, cook, coordinate the day, or act as your lawyer, accountant, or insurer. Using it does not make {DEVELOPER} any of those. Counts, totals, the schedule, seating, reminders and drafts are only as complete as what you type and as what iOS delivers. They can be wrong, late, or missing. You still handle bookings, contracts, payments, headcounts, and what you tell guests and vendors.</p>
+
+        <h2>3. Allergies, access, and safety</h2>
+        <p>Dietary notes, allergy notes and accessibility notes are reminders you write for yourself. The App does not check a menu, does not tell a kitchen, and is not a medical device. You must confirm needs directly with the people involved. Do not treat the App as a safety system. To the extent permitted by law, {DEVELOPER} is not liable for an allergic reaction, an injury, or any other harm that comes from relying on a note in the App instead of checking with the person and the people cooking or hosting.</p>
+
+        <h2>4. Money</h2>
+        <p>Budget figures, deposits and vendor notes are your records. They are not tax, legal, or financial advice, and the App does not move money. You are responsible for what you pay and for the contracts you sign. The developer does not process payments. If a purchase is ever offered inside the App, Apple processes it, and Apple’s payment terms apply. We do not see your card or payment details.</p>
+
+        <h2>5. Other people’s information</h2>
+        <p>You confirm that you have a proper reason to store information about guests, vendors and anyone else you add, and to share it with a partner through iCloud or with a coordinator’s phone next to yours. You are responsible for what you send by message, mail, calendar, iCloud share, or that phone, and for requests from those people about their information. We do not receive that information and cannot change it inside your phone.</p>
+
+        <h2>6. Your content and loss of data</h2>
+        <p>You keep all rights in what you enter. You grant us no license to it, because we do not receive it. You are responsible for your own copies. Deleting the App, deleting items, changing phones, turning off iCloud, or a failed sync can remove data permanently. We cannot restore it. Reminders may not appear if notifications are off, a Focus mode is on, or a permission was denied.</p>
+
+        <h2>7. Drafts you might read aloud</h2>
+        <p>Speech drafts, whether from the on-device model or from a local template, can be clumsy, incomplete, or simply wrong. They are not facts about any person. Read and rewrite them before you say them. You are responsible for the words you actually speak.</p>
+
+        <h2>8. Acceptable use</h2>
+        <p>You agree not to copy, modify, reverse engineer, decompile, or create derivative works of the App, except where the law does not allow that limit, and not to use the App to store or share information you have no right to keep, or for any unlawful purpose.</p>
+
+        <h2>9. Intellectual property</h2>
+        <p>The App, its design, code, name and mark belong to {DEVELOPER}. No rights are granted except the license in section 1. Apple’s services remain Apple’s.</p>
+
+        <h2>10. Apple and other services</h2>
+        <p>iCloud, Calendar, Contacts, Messages, Mail, speech recognition, Face ID, push delivery and iTunes Search are Apple services. We do not control them and are not responsible for their availability, delivery, or accuracy. Sending the plan to a coordinator depends on the local network and on the other phone. It can fail.</p>
+
+        <h2>11. No warranty and limited liability</h2>
+        <p>The App is provided “as is” and “as available.” To the maximum extent permitted by law, {DEVELOPER} disclaims all warranties, including merchantability, fitness for a particular purpose, accuracy, and uninterrupted operation, and is not liable for indirect, incidental, special, or consequential damages, lost profits, lost data, a missed appointment, a wrong table, a wrong total, a failed reminder, or a wedding that does not go as you hoped.</p>
+        <p>Where a limit is allowed, {DEVELOPER}’s total liability arising out of the App is limited to the amount you paid {DEVELOPER} for the App in the twelve months before the claim. If you paid nothing, that limit is zero. Nothing in these Terms excludes liability that cannot be excluded, including for death or personal injury caused by negligence, for fraud, or for mandatory consumer rights in your country of residence.</p>
+
+        <h2>12. Claims by other people</h2>
+        <p>You will indemnify {DEVELOPER} against claims, damages and reasonable costs brought by a guest, vendor, or anyone else, arising out of information you entered, shared, or acted on, or out of your breach of these Terms. This does not apply to the extent a claim is caused by our fraud or by liability that cannot legally be shifted to you.</p>
+
+        <h2>13. Venue mode</h2>
+        <p>Leaving venue mode asks for Face ID or the device passcode through Apple. That question does not make the phone secure against someone who has the device, the passcode, or an unlocked screen.</p>
+
+        <h2>14. Termination</h2>
+        <p>These Terms apply until they end. The license ends if you breach them. You may stop at any time by deleting the App. Sections that by nature should survive (content, liability, indemnity, law) survive.</p>
+
+        <h2>15. Changes</h2>
+        <p>We may update these Terms or the App. The date above is the current version. If you keep using the App after an update, you accept the updated Terms. If you do not accept them, stop using the App.</p>
+
+        <h2>16. Apple as a third-party beneficiary</h2>
+        <p>These Terms are between you and {DEVELOPER}, not Apple. Apple has no duty to maintain or support the App and is not responsible for claims about it. Apple and its subsidiaries are third-party beneficiaries and may enforce these Terms against you.</p>
+
+        <h2>17. Law and disputes</h2>
+        <p>These Terms are governed by the laws of the Republic of Lithuania, without regard to conflict-of-law rules. Courts of Lithuania have jurisdiction, except where mandatory consumer-protection law in your country of residence lets you sue at home or gives you rights these Terms cannot take away.</p>
+
+        <h2>18. Contact</h2>
+        <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      </div>
+
+      <div data-lang-ru>
+        <p>Настоящие Условия регулируют использование приложения Tied для iOS («Приложение»). Используя Приложение, вы также соглашаетесь со стандартным <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">лицензионным соглашением Apple</a>. Если вы не согласны, не используйте Приложение.</p>
+
+        <h2>1. Лицензия</h2>
+        <p>{DEVELOPER} предоставляет вам ограниченную, неисключительную, непередаваемую, отзывную лицензию использовать Приложение на устройствах Apple, которыми вы владеете или управляете, для личной некоммерческой подготовки вашей свадьбы, в соответствии с этими Условиями и правилами Apple.</p>
+
+        <h2>2. Что Tied делает и чего не делает</h2>
+        <p>Tied хранит ваши записи на iPhone. Оно не бронирует площадку, не готовит еду, не ведёт день и не работает юристом, бухгалтером или страховщиком. Пользование приложением не делает {DEVELOPER} кем-то из них. Счётчики, суммы, расписание, рассадка, напоминания и черновики верны лишь настолько, насколько верно то, что вы ввели, и насколько iOS это доставила. Они могут быть неверными, поздними или отсутствовать. Брони, договоры, оплаты, число гостей и то, что вы говорите гостям и подрядчикам, остаются на вас.</p>
+
+        <h2>3. Аллергия, доступность и безопасность</h2>
+        <p>Пищевые заметки, заметки об аллергии и о доступности — это напоминания, которые вы пишете себе. Приложение не сверяет меню, не сообщает кухне и не является медицинским изделием. Потребности нужно подтверждать напрямую с теми, кого это касается. Не считайте Приложение системой безопасности. В пределах, допустимых законом, {DEVELOPER} не отвечает за аллергическую реакцию, травму или иной вред, если вместо проверки с человеком и с теми, кто готовит или принимает, вы положились на заметку в Приложении.</p>
+
+        <h2>4. Деньги</h2>
+        <p>Цифры бюджета, задатки и заметки о подрядчиках — ваши записи. Это не налоговая, юридическая или финансовая консультация, и Приложение не переводит деньги. За платежи и подписанные договоры отвечаете вы. Платежи разработчик не проводит. Если внутри Приложения когда-либо появится покупка, её обработает Apple по своим правилам оплаты. Карту и платёжные данные мы не видим.</p>
+
+        <h2>5. Сведения о других людях</h2>
+        <p>Вы подтверждаете, что у вас есть основание хранить сведения о гостях, подрядчиках и других людях, которых вы добавляете, и передавать их партнёру через iCloud или на телефон координатора рядом. Вы отвечаете за то, что отправляете сообщением, почтой, в календарь, через общий доступ iCloud или на этот телефон, и за просьбы этих людей об их сведениях. Мы эти сведения не получаем и не можем поправить их внутри вашего телефона.</p>
+
+        <h2>6. Ваш контент и потеря данных</h2>
+        <p>Права на введённое остаются у вас. Лицензии нам вы не даёте, потому что мы это не получаем. Копии — ваша забота. Удаление Приложения, удаление записей, смена телефона, выключение iCloud или сбой синхронизации могут стереть данные безвозвратно. Восстановить их мы не можем. Напоминание может не прийти, если уведомления выключены, включён Фокус или разрешение не дано.</p>
+
+        <h2>7. Черновики, которые можно прочесть вслух</h2>
+        <p>Черновик речи — с модели на устройстве или из локального шаблона — может быть неуклюжим, неполным или просто неверным. Это не факты о человеке. Прочитайте и перепишите текст, прежде чем произносить. За сказанные слова отвечаете вы.</p>
+
+        <h2>8. Допустимое использование</h2>
+        <p>Вы соглашаетесь не копировать, не изменять, не декомпилировать Приложение и не создавать производные произведения, кроме случаев, когда закон не допускает такого ограничения, а также не использовать Приложение, чтобы хранить или передавать сведения, которые вы не вправе хранить, и не использовать его в незаконных целях.</p>
+
+        <h2>9. Интеллектуальная собственность</h2>
+        <p>Приложение, его дизайн, код, имя и знак принадлежат {DEVELOPER}. Кроме лицензии из раздела 1, права не предоставляются. Сервисы Apple остаются сервисами Apple.</p>
+
+        <h2>10. Apple и другие сервисы</h2>
+        <p>iCloud, Календарь, Контакты, Сообщения, Почта, распознавание речи, Face ID, доставка уведомлений и поиск iTunes принадлежат Apple. Мы их не контролируем и не отвечаем за их доступность, доставку и точность. Отправка плана координатору зависит от локальной сети и от другого телефона. Она может не получиться.</p>
+
+        <h2>11. Отказ от гарантий и ограничение ответственности</h2>
+        <p>Приложение предоставляется «как есть» и «по мере доступности». В максимально допустимой законом степени {DEVELOPER} отказывается от любых гарантий, включая пригодность для продажи, соответствие определённой цели, точность и бесперебойную работу, и не отвечает за косвенные, случайные, особые или последующие убытки, упущенную выгоду, потерю данных, пропущенную встречу, неверный стол, неверную сумму, не сработавшее напоминание или свадьбу, которая прошла не так, как вы надеялись.</p>
+        <p>Там, где ограничение допустимо, совокупная ответственность {DEVELOPER} по Приложению ограничена суммой, которую вы заплатили {DEVELOPER} за Приложение за двенадцать месяцев до требования. Если вы ничего не платили, предел равен нулю. Ничто в Условиях не исключает ответственность, которую нельзя исключить: за смерть или вред здоровью по неосторожности, за мошенничество и за обязательные права потребителя в стране вашего проживания.</p>
+
+        <h2>12. Претензии других людей</h2>
+        <p>Вы обязуетесь возместить {DEVELOPER} претензии, ущерб и разумные расходы, которые предъявит гость, подрядчик или иное лицо из-за сведений, которые вы ввели, передали или на которые положились, либо из-за нарушения вами этих Условий. Это не распространяется на ту часть претензии, которая вызвана нашим мошенничеством или ответственностью, которую закон не позволяет переложить на вас.</p>
+
+        <h2>13. Режим площадки</h2>
+        <p>Выход из режима площадки запрашивает Face ID или код устройства через Apple. Этот запрос не защищает телефон от человека, у которого есть устройство, код или уже открытый экран.</p>
+
+        <h2>14. Прекращение</h2>
+        <p>Условия действуют, пока не прекратятся. Лицензия прекращается при их нарушении. Вы можете остановиться в любой момент, удалив Приложение. Разделы, которые по смыслу должны пережить прекращение (контент, ответственность, возмещение, право), сохраняют силу.</p>
+
+        <h2>15. Изменения</h2>
+        <p>Мы можем обновлять Условия и приложение. Дата в начале страницы показывает действующую версию. Если вы продолжаете пользоваться приложением после обновления, вы принимаете обновлённые Условия. Если не принимаете, удалите приложение и перестаньте им пользоваться.</p>
+
+        <h2>16. Apple как третье лицо-выгодоприобретатель</h2>
+        <p>Условия заключены между вами и {DEVELOPER}, а не Apple. Apple не обязана обслуживать и поддерживать Приложение и не отвечает по претензиям о нём. Apple и её дочерние компании — третьи лица-выгодоприобретатели и могут требовать исполнения Условий от вас.</p>
+
+        <h2>17. Право и споры</h2>
+        <p>Условия регулируются правом Литовской Республики, без коллизионных норм. Подсудны суды Литвы, кроме случаев, когда обязательное право защиты потребителей страны вашего проживания позволяет судиться дома или даёт права, которых эти Условия отнять не могут.</p>
+
+        <h2>18. Контакт</h2>
+        <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      </div>
+    </div>
+  </article>
+</Layout>

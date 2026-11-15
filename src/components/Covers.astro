@@ -1,0 +1,22 @@
+---
+const covers = [
+  { en: 'Watercolor', ru: 'Акварель', style: 'background: radial-gradient(80px 60px at 30% 40%, #f0d7c4, transparent 70%), radial-gradient(90px 70px at 70% 30%, #e7d7b4, transparent 70%), radial-gradient(100px 80px at 50% 80%, #d5ddd4, transparent 72%), #f6f1ea;' },
+  { en: 'Silk', ru: 'Шёлк', style: 'background: repeating-linear-gradient(180deg, transparent, transparent 10px, rgba(141,107,60,.35) 11px), linear-gradient(160deg, #f7f1e6, #efe4d2);' },
+  { en: 'Frame', ru: 'Рамка', style: 'background: linear-gradient(#f7f3ee, #f7f3ee) padding-box, linear-gradient(135deg, #c4a87a, #8d6b3c) border-box; border: 10px solid transparent;' },
+  { en: 'Night', ru: 'Ночь', style: 'background: radial-gradient(80px 40px at 50% 100%, rgba(212,180,131,.45), transparent 70%), linear-gradient(180deg, #1c2433, #121820);' },
+];
+---
+<section class="px-4 py-16">
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-5xl"><span data-lang-en>A cover, if you want one</span><span data-lang-ru>Обложка, если она нужна</span></h2>
+    <p class="mt-4 text-[var(--ink-soft)] max-w-xl mx-auto"><span data-lang-en>You can skip the photo. Four covers are already on the phone, next to the names. They are only a background.</span><span data-lang-ru>Фото можно не ставить. Четыре обложки уже есть в телефоне, рядом с именами. Это только фон.</span></p>
+    <ul class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+      {covers.map((c) => (
+        <li data-reveal>
+          <div class="mx-auto w-24 h-24 rounded-[22px] shadow-lg" style={c.style}></div>
+          <p class="mt-3 text-sm font-semibold"><span data-lang-en>{c.en}</span><span data-lang-ru>{c.ru}</span></p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import Icon from './Icon.astro';
+const rows = [
+  { en: 'Account required', ru: 'Нужен аккаунт', tiedEn: 'No', tiedRu: 'Нет', otherEn: 'Yes', otherRu: 'Да' },
+  { en: 'Guest list on the developer’s server', ru: 'Список гостей на сервере разработчика', tiedEn: 'No', tiedRu: 'Нет', otherEn: 'Yes', otherRu: 'Да' },
+  { en: 'Ads and analytics', ru: 'Реклама и аналитика', tiedEn: 'No', tiedRu: 'Нет', otherEn: 'Often', otherRu: 'Часто' },
+  { en: 'Data stays on your iPhone', ru: 'Данные остаются на iPhone', tiedEn: 'Yes', tiedRu: 'Да', otherEn: 'No', otherRu: 'Нет' },
+  { en: 'Optional iCloud, only with people you invite', ru: 'iCloud по желанию, только с теми, кого вы пригласили', tiedEn: 'Yes', tiedRu: 'Да', otherEn: 'No', otherRu: 'Нет' },
+];
+---
+<section id="privacy" class="px-4 py-16">
+  <div class="mx-auto max-w-4xl">
+    <h2 class="text-3xl md:text-5xl text-center"><span data-lang-en>Your guest list stays on your phone</span><span data-lang-ru>Список гостей остаётся на телефоне</span></h2>
+    <p class="mt-4 text-center text-[var(--ink-soft)] max-w-xl mx-auto">
+      <span data-lang-en>Tied has no accounts and no server of its own, so we never receive your guest list. Data is stored on your iPhone. If you turn on iCloud, it lives in your Apple storage and is available only to you and people you invite. This site does not use advertising cookies.</span>
+      <span data-lang-ru>У Tied нет аккаунтов и нет своего сервера, поэтому список гостей до нас не доходит. Данные хранятся на вашем iPhone. Если включить iCloud, они лежат в вашем хранилище Apple и доступны только вам и тем, кого вы пригласите. Этот сайт не использует рекламные cookie.</span>
+    </p>
+    <div class="td-card mt-10 overflow-x-auto" data-reveal>
+      <table class="w-full text-sm min-w-[36rem]">
+        <thead><tr class="text-left text-[var(--ink-soft)]">
+          <th scope="col" class="p-4"></th>
+          <th scope="col" class="p-4 font-bold">Tied</th>
+          <th scope="col" class="p-4 font-bold"><span data-lang-en>Typical wedding services</span><span data-lang-ru>Типичные свадебные сервисы</span></th>
+        </tr></thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr class="border-t border-[var(--border)]">
+              <th scope="row" class="p-4 font-medium text-left"><span data-lang-en>{r.en}</span><span data-lang-ru>{r.ru}</span></th>
+              <td class="p-4 font-semibold"><span data-lang-en>{r.tiedEn}</span><span data-lang-ru>{r.tiedRu}</span></td>
+              <td class="p-4 text-[var(--ink-soft)]"><span data-lang-en>{r.otherEn}</span><span data-lang-ru>{r.otherRu}</span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-xs text-center text-[var(--ink-soft)]"><span data-lang-en>This is how online wedding services are usually built. It is not a claim about any specific product.</span><span data-lang-ru>Так обычно устроены онлайн-сервисы для свадеб. Это не утверждение о каком-то конкретном продукте.</span></p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <span class="td-pill"><Icon name="lock" class="w-3.5 h-3.5" /><span data-lang-en>Face ID to leave Venue mode</span><span data-lang-ru>Face ID для выхода из режима площадки</span></span>
+      <span class="td-pill"><Icon name="language" class="w-3.5 h-3.5" /><span data-lang-en>Name recordings stay on the device</span><span data-lang-ru>Записи произношения остаются на устройстве</span></span>
+      <span class="td-pill"><Icon name="shield-check" class="w-3.5 h-3.5" /><span data-lang-en>No ads and no tracking</span><span data-lang-ru>Без рекламы и слежки</span></span>
+    </div>
+  </div>
+</section>

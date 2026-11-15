@@ -1,0 +1,26 @@
+---
+import Mark from './Mark.astro';
+import { url, CONTACT_EMAIL, DEVELOPER } from '../config';
+const year = new Date().getFullYear();
+---
+<footer class="mt-24 px-4 pb-10">
+  <div class="td-card mx-auto max-w-5xl p-8 flex flex-col md:flex-row gap-8 md:items-center justify-between">
+    <div class="flex items-center gap-3">
+      <Mark class="w-11 h-11" />
+      <div>
+        <p class="font-display text-2xl leading-none">Tied</p>
+        <p class="text-sm text-[var(--ink-soft)]"><span data-lang-en>Guests, money, and the day.</span><span data-lang-ru>Гости, деньги и день.</span></p>
+      </div>
+    </div>
+    <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold" aria-label="Footer">
+      <a href={url('privacy/')}><span data-lang-en>Privacy</span><span data-lang-ru>Конфиденциальность</span></a>
+      <a href={url('terms/')}><span data-lang-en>Terms</span><span data-lang-ru>Условия использования</span></a>
+      <a href={url('support/')}><span data-lang-en>Support</span><span data-lang-ru>Поддержка</span></a>
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+    </nav>
+  </div>
+  <p class="mx-auto max-w-5xl mt-6 text-xs text-center text-[var(--ink-soft)]">
+    © {year} {DEVELOPER}. <span data-lang-en>Tied helps you keep wedding records. It doesn’t organize the event and doesn’t replace contracts with vendors.</span><span data-lang-ru>Tied помогает вести записи о свадьбе. Он не организует мероприятие и не заменяет договоры с подрядчиками.</span>
+    <span data-lang-en>Apple, iPhone, Face ID and App Store are trademarks of Apple Inc.</span><span data-lang-ru>Apple, iPhone, Face ID и App Store — товарные знаки Apple Inc.</span>
+  </p>
+</footer>

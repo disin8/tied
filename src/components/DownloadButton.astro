@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+import { APP_STORE_URL } from '../config';
+interface Props { class?: string }
+const { class: cls = '' } = Astro.props;
+---
+{APP_STORE_URL ? (
+  <a href={APP_STORE_URL} class={`td-btn ${cls}`} rel="noopener">
+    <Icon name="arrow-right" class="w-4 h-4" />
+    <span data-lang-en>Download on the App Store</span><span data-lang-ru>Скачать в App Store</span>
+  </a>
+) : (
+  <span class={`td-btn ${cls}`} aria-disabled="true" role="note">
+    <Icon name="sparkle" class="w-4 h-4" />
+    <span data-lang-en>Coming soon to the App Store</span><span data-lang-ru>Скоро в App Store</span>
+  </span>
+)}

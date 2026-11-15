@@ -1,0 +1,39 @@
+---
+import PhoneMockup from './PhoneMockup.astro';
+const steps = [
+  {
+    n: '1',
+    en: ['Enter two names', 'They appear on the cover with the guest count and open tasks under them. You can add a photo later.'],
+    ru: ['Впишите два имени', 'Они появятся на обложке, а под ними число гостей и открытых дел. Фото можно добавить позже.'],
+  },
+  {
+    n: '2',
+    en: ['Mark replies and payments', 'Swipe through waiting replies, seat families, and on each vendor card note what you paid and what remains.'],
+    ru: ['Отметьте ответы и платежи', 'Смахните ожидающие ответы, рассадите семьи и на карточке подрядчика укажите, сколько оплачено и сколько осталось.'],
+  },
+  {
+    n: '3',
+    en: ['Build the day’s schedule', 'Set start and length for the ceremony, dinner, and dancing. Outdoor items can keep a second time for rain. On the day you can send the schedule to a coordinator’s iPhone without guest phones or allergy notes.'],
+    ru: ['Соберите программу дня', 'Задайте начало и длину церемонии, ужина и танцев. Для уличных пунктов можно второе время на дождь. В день свадьбы программу можно отправить на iPhone координатора без телефонов гостей и аллергий.'],
+  },
+];
+---
+<section class="px-4 py-8 md:py-16">
+  <div class="mx-auto max-w-5xl grid md:grid-cols-2 gap-12 items-center">
+    <PhoneMockup only="day" />
+    <div>
+      <h2 class="text-4xl md:text-5xl leading-tight"><span data-lang-en>How to begin</span><span data-lang-ru>С чего начать</span></h2>
+      <ol class="mt-8 space-y-6">
+        {steps.map((s) => (
+          <li class="flex gap-4" data-reveal>
+            <span class="shrink-0 w-10 h-10 grid place-items-center rounded-full bg-[var(--ink)] text-[var(--bg)] font-bold">{s.n}</span>
+            <div>
+              <h3 class="text-2xl leading-tight"><span data-lang-en>{s.en[0]}</span><span data-lang-ru>{s.ru[0]}</span></h3>
+              <p class="text-[var(--ink-soft)]"><span data-lang-en>{s.en[1]}</span><span data-lang-ru>{s.ru[1]}</span></p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
